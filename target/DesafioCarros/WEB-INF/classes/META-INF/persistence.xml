@@ -17,7 +17,7 @@
 			<property name="javax.persistence.jdbc.password"
 				value="Leo246810" />
 			<property name="javax.persistence.jdbc.driver"
-				value="com.mysql.cj.jdbc.Driver" />
+				value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQLDialect" />
 			<property name="hibernate.show_sql" value="true" />

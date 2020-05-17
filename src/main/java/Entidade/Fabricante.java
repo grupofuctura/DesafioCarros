@@ -13,9 +13,9 @@ public class Fabricante {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(nullable = false)
+	@Column(name = "CODIGO", nullable = false)
 	private int codigo;
-	@Column
+	@Column(name = "DESCRICAO")
 	private String descricao;
 
 	public Fabricante() {
@@ -36,6 +36,11 @@ public class Fabricante {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	@Override
+	public String toString() {
+		return "Fabricante [codigo=" + codigo + ", descricao=" + descricao + "]";
 	}
 
 }

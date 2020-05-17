@@ -1,36 +1,19 @@
 package DAO;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.util.List;
 
-import ConexaoJDBC.Conexao;
 import Entidade.Fabricante;
 
-public class FabricanteDAO {
+public interface FabricanteDAO {
 
-	private Connection connection;
+	public void inserir(Fabricante fabricante);
 
-	public FabricanteDAO() {
-		connection = Conexao.getConexao();
-	}
+	public void alterar(Fabricante fabricante);
 
-	public void salvar(Fabricante fabricante) {
-		try {
-			String sql = "insert into fabricante (codigo, descricao) values (?, ?)";
-			PreparedStatement ps = connection.prepareStatement(sql);
-			ps.setLong(1, fabricante.getCodigo());
-			ps.setString(2, fabricante.getDescricao());
-			ps.execute();
-			connection.commit(); // Salvando registro teste
+	public void remover(Fabricante fabricante);
 
-		} catch (Exception e) {
-			try {
-				connection.rollback(); // Reverte alteração
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-			e.printStackTrace();
-		}
-	}
+	public Fabricante pesquisar(int codigo);
+
+	public List<Fabricante> listarTodos();
 
 }

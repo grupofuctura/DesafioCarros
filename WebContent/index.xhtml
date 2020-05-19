@@ -9,23 +9,24 @@
 </h:head>
 <h:body>
 	<h:form id="form">
-		<table width="100%">
+		<table>
 			<tr>
-				<td colspan="2" align="center"><ui:insert name="cabecalho">
-						<h1>Desafio SEFAZ</h1>
+				<td colspan="2" align="left"><ui:insert name="cabecalho">
+						<h1>DESAFIO SEFAZ</h1>
 					</ui:insert></td>
 			</tr>
 			<tr>
 				<td width="200px" valign="top"><ui:insert name="menu">
 						<h4>Menu</h4>
 						<h:panelGrid columns="1">
-							<h:commandLink value="VEÍCULOS" action="usuario.xhtml" />
-							<h:commandLink value="USUÁRIOS" action="usuario.xhtml" />
+							<p:commandButton value="Login" id="login" action="login.xhtml"
+								styleClass="ui-priority-primary" />
+
 						</h:panelGrid>
 					</ui:insert></td>
 				<td><ui:insert name="conteudo">
-              Aqui vão abrir as páginas da aplicação
-            </ui:insert></td>
+
+					</ui:insert></td>
 			</tr>
 		</table>
 	</h:form>

@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/index.xhtml">
+	<ui:define name="conteudo">
+		<h1>Login</h1>
+		<h:panelGrid id="dadosUsuario" columns="2">
+			<p:outputLabel id="emailText" value="Email:" />
+			<p:inputText id="email" label="Email" maxlength="100" size="60" />
+			<p:outputLabel id="senhaText" value="Senha:" />
+			<p:inputText id="senha" label="Senha" maxlength="14" size="30" />
+			<br />
+			<br />
+			<p:commandButton value="Entrar" id="entrar" action="veiculo.xhtml"
+				styleClass="ui-priority-primary" />
+
+		</h:panelGrid>
+		<br />
+		<br />
+
+
+
+		<p:commandButton value="Novo usuário" id="usuarios"
+			action="usuario.xhtml" style="margin-right:20px;"
+			styleClass="ui-priority-primary" />
+
+	</ui:define>
+
+</ui:composition>
+</html>

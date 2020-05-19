@@ -13,6 +13,8 @@ public class Usuarios {
 	@Column(nullable = false)
 	private String cpf;
 	@Column
+	private String senha;
+	@Column
 	private String nome;
 	@Column
 	private int idade;
@@ -23,6 +25,14 @@ public class Usuarios {
 
 	public Usuarios() {
 		super();
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	public String getCpf() {
